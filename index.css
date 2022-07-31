@@ -1,0 +1,297 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(144, 117, 108);
+}
+
+.line{
+    background-color: rgba(0, 0, 0, 0.767);
+    width: 100%;
+    height: 5px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inventario-container{
+    position: relative;
+    background-color: none !important;
+    margin-top: 30px;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    background-color: rgb(205, 201, 197);
+    padding: 20px;
+}
+
+
+.inventario-container--agregar{
+    background-color: rgb(40, 129, 40);
+    width: 85px;
+    height: 40px;
+    color: aliceblue;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 2px;
+
+}
+
+.inventario-container--agregar:hover{
+    background-color: rgb(76, 179, 76);
+}
+
+.inventario-container--search-obcions{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.inventario-container--search-obcions input{
+    margin-top: 0;
+    
+}
+
+.inventario-container_registros  div{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+.inventario-container_registros .desc{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(192, 64, 64);
+    display: grid;
+    grid-template-columns: 10% 20% 10% 10% 10% 10%;
+    grid-template-rows: 100%;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.desc p{
+  /*margin-bottom: 0;
+    position: relative;
+    top: 10px;*/
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+
+
+.inventario-container_registros .fila{
+    margin-top: 0;
+    border-top: 1px solid            #ffffff88;
+    display: grid;
+    grid-template-columns: 10% 20% 10% 10% 10% 10%;
+    grid-template-rows: 100%;
+    justify-content:space-around;
+    flex-wrap: wrap;
+
+}
+
+.inventario-container_registros .fila div{
+    margin-top: 0;
+    margin-left: 10px ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+}
+
+
+.fila input{
+   position: relative;
+   top: 10px;
+   left: 15px;
+   width: 20px;
+   height: 20px;
+}
+
+
+.fila p{
+
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+
+
+/*-------------------------------------------------------------------------*/
+
+
+.add-product-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.add-product .off{
+    display: none;
+}
+
+
+.add-product{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    background-color: rgb(205, 201, 197);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+.add-product_grup{
+    
+    margin-bottom: 5px;
+}
+
+.add-product_grup label{
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#grupo_categoria-cantidad{
+    display: flex;
+}
+
+.add-product_grup_select{
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    
+}
+
+.add-product_grup_cantidad{
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+#cantidad{
+    width: 80%;
+}
+
+.add-product_grup input{
+    width: 100%;
+    background-color: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 40px 0 10px;
+    transition: 0.2s ease all;
+}
+
+.add-product_grup input:focus{
+    outline: 3px solid rgba(47, 125, 235, 0.652);
+}
+
+.add-product_grup p{
+    font-family: 5px;
+    margin-bottom: 0;
+    color: rgb(207, 16, 16);
+}
+
+.add-product_error{
+  display: none;
+}
+
+.add-product_error-activo{
+    display: block;
+}
+
+.add-product_error-mensage{
+    font-family: 5px;
+    font-weight: 500;
+    background-color: rgb(187, 22, 55);
+    border-radius: 3px;
+    color: black;
+    text-align: center;
+    padding: 4px 4px 4px 4px;
+    transition: 1s ease all
+}
+
+/* clases incorrectas*/
+.add-product_grup-incorrecto{
+    margin-bottom: 5px;
+}
+
+.add-product_grup-incorrecto input{
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 40px 0 10px;
+    transition: 0.2s ease all;
+    color: rgb(187, 22, 55);
+
+}
+
+.add-product_grup-incorrecto input:focus{
+    outline: 3px solid rgb(187, 22, 55);
+}
+
+.add-product_grup-incorrecto label{
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(187, 22, 55);
+}
+
+/*------------------------------DatosEstadisticos------------------------------*/
+
+.datos-estadisticos{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 5px;
+    
+}
+
+.datos-estadisticos p{
+    margin: 10px;
+    font-weight: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+
+.buttons-pagination-container{
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+}
+
